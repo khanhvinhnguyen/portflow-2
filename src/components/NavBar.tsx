@@ -17,10 +17,11 @@ const NavBar = () => {
         </Link>
 
         {/* Hamburger */}
-        <div className="hamburger block md:hidden">
-          <FaBars onClick={() => {
-            setIsOpen(!isOpen)
-          }} /> 
+        <div 
+          className="hamburger block md:hidden" 
+          onClick={() => {setIsOpen(!isOpen)}}
+        >
+          <FaBars /> 
         </div>
 
         {/* Nav Items */}
@@ -38,7 +39,7 @@ const NavBar = () => {
         {/* Mobile Menu */}
         {
           isOpen &&
-          <div>
+          <div className='MobileMenu flex flex-col items-center justify-center gap-4 fixed top-0 left-0 w-full h-screen bg-[#171717] text-white z-50'>
             <Link href="#about" onClick={() => {
               setIsOpen(!isOpen)
             }}>About</Link>
