@@ -31,6 +31,7 @@ const NavBar = () => {
           <a href='#experience'>Experience</a>
           <a href='#projects'>Projects</a>
           <a href='#education'>Education</a>
+          <a href='#contact'>Contact</a>
         </ul>
 
         {/* Theme and Language */}
