@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        primary: '#854CE6',
       },
       clipPath: {
         'custom-polygon': 'polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%)',

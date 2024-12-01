@@ -34,8 +34,8 @@ const NavBar = () => {
           <a href='#contact'>Contact</a>
         </ul>
 
-        {/* Theme and Language */}
-
+        {/* Theme */}
+        
 
         {/* Mobile Menu */}
         {
