@@ -2,7 +2,7 @@
 export const Bio = {
   name: "Vinh Nguyen",
   roles: [
-    "Full Stack Developer",
+    "Full-stack Developer",
     "Programmer",
   ],
   description:
