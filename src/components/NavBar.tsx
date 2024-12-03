@@ -8,7 +8,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className='sticky top-0 left-0 w-full flex items-center justify-center p-4 z-50 transition-all duration-800 ease-in-out md:transition-none'>
+    <header className='sticky top-0 left-0 w-full flex items-center justify-center p-4 z-50 transition-all duration-800 ease-in-out md:transition-none bg-black'>
       <div className='flex w-full max-w-7xl items-center justify-between'>
         {/* Logo */}
         <Link href='/' className='flex items-center'>
@@ -35,7 +35,7 @@ const NavBar = () => {
         </ul>
 
         {/* Theme */}
-        
+
 
         {/* Mobile Menu */}
         {
