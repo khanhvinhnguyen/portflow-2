@@ -26,12 +26,42 @@ const NavBar = () => {
 
         {/* Nav Items */}
         <ul className='NavItems w-full items-center justify-end gap-8 hidden md:flex'>
-          <a href="#about">About</a>
-          <a href='#skills'>Skills</a>
-          <a href='#experience'>Experience</a>
-          <a href='#projects'>Projects</a>
-          <a href='#education'>Education</a>
-          <a href='#contact'>Contact</a>
+          <Link 
+            href="#about"
+            className="hover:text-primary hover:font-bold"
+          >
+            About
+          </Link>
+          <Link 
+            href='#skills'
+            className="hover:text-primary hover:font-bold"
+          >
+            Skills
+          </Link>
+          <Link 
+            href='#experience'
+            className="hover:text-primary hover:font-bold"
+          >
+            Experience
+          </Link>
+          <Link 
+            href='#projects'
+            className="hover:text-primary hover:font-bold"
+          >
+            Projects
+          </Link>
+          <Link 
+            href='#education'
+            className="hover:text-primary hover:font-bold"
+          >
+            Education
+          </Link>
+          <Link 
+            href='#contact'
+            className="hover:text-primary hover:font-bold"
+          >
+            Contact
+          </Link>
         </ul>
 
         {/* Theme */}
