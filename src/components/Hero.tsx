@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="relative flex flex-col justify-between items-center w-full max-w-[1100px] lg:flex-row">
           <div 
             id='Left' 
-            className="w-full order-2 lg:order-1 mb-8 sm:mb-20 justify-center lg:justify-end lg:items-center gap-3"
+            className="w-full order-2 lg:order-1 mb-8 sm:mb-20 flex flex-col justify-center lg:justify-end items-center lg:items-start gap-3"
           >
             <h1 className='text-4xl lg:text-5xl font-bold mb-0 text-white text-center lg:text-left sm:mb-2'>
               Hi, my name is <br/>{Bio.name}
@@ -34,13 +34,13 @@ const Hero = () => {
                 />
               </span>
             </p>
-            <p className='text-white text-lg lg:text-2xl'>
+            <p className='text-white text-lg lg:text-2xl mb-10'>
               {Bio.description}
             </p>
             <Link 
-              href={'Bio.resume'} 
+              href={Bio.resume} 
               target='_blank'
-              className="appearance-none no-underline w-[95%] max-w-[300px] text-center py-3 sm:py-4 px-0 text-white rounded-[20px] cursor-pointer font-semibold text-[18px] sm:text-[20px] transition-all duration-200 ease-in-out bg-[linear-gradient(225deg,hsla(271,100%,50%,1),hsla(294,100%,50%,1))] shadow-[20px_20px_60px_#1F2634,-20px_-20px_60px_#1F2634] hover:scale-105 hover:duration-400 hover:ease-in-out hover:brightness-100"
+              className="appearance-none no-underline w-[95%] max-w-[300px] flex justify-center text-center py-4 sm:py-4 px-0 text-white rounded-full cursor-pointer font-semibold text-[18px] sm:text-[20px] transition-all duration-200 ease-in-out bg-[linear-gradient(225deg,hsla(271,100%,50%,1),hsla(294,100%,50%,1))] shadow-[20px_20px_60px_#1F2634,-20px_-20px_60px_#1F2634] hover:scale-105 hover:duration-400 hover:ease-in-out hover:brightness-100"
             >
               Check Resume
             </Link>
