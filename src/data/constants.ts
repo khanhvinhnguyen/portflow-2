@@ -19,18 +19,15 @@ export const skills = [
     skills: [
       {
         name: "React Js",
-        image:
-          "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
+        image: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
       },
       {
         name: "Next Js",
-        image:
-          "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg",
+        image: "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg",
       },
       {
         name: "Redux",
-        image:
-          "https://www.vectorlogo.zone/logos/js_redux/js_redux-icon.svg",
+        image: "https://www.vectorlogo.zone/logos/js_redux/js_redux-icon.svg",
       },
       {
         name: "HTML",
