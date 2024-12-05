@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <div id='about'>
-      <div className='flex items-center justify-center relative py-8 px-4 md:py-16 lg:py-20 lg:px-8 z-10 clip-path-custom-polygon'>
+      <div className='flex items-center justify-center relative py-8 px-4 md:py-16 lg:py-20 lg:px-8 z-10 clip-path-custom-polygon lg:h-screen'>
         {/* Hero background animation */}
         <div>
         </div>

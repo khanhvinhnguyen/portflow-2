@@ -1,8 +1,11 @@
-import Hero from "@/components/Hero";
+import { Hero, Skills } from "@/components";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <Hero/>
+    <div>
+      <Hero/>
+      <Skills/>
+    </div>
   );
 }
