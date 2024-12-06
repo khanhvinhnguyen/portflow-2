@@ -13,12 +13,12 @@ const Skills = () => {
 
         <div className='w-full flex flex-wrap justify-center mt-8 gap-8'>
           {skills.map((skill) => (
-            <div>
-              <h3>{skill.title}</h3>
-              <div>
+            <div className='w-full max-w-[330px] md:max-w-[400px] lg:max-w-[500px] border-[0.1px] border-solid border-purple-600 rounded-2xl py-2 lg:py-4 px-9'>
+              <h3 className='text-3xl font-bold mb-5 text-center'>{skill.title}</h3>
+              <div className='flex flex-wrap justify-center gap-3 mb-5'>
                 {skill.skills.map((item) => (
-                  <div>
-                    <Image src={item.image} width={50} height={50} alt={item.name}></Image>
+                  <div className='text-sm lg:text-base py-1 md:py-2 lg:py-3 px-3 lg:px-4 flex justify-center items-center gap-2'>
+                    <Image src={item.image} width={24} height={24} alt={item.name}></Image>
                     <p>{item.name}</p>
                   </div>
                 ))}
