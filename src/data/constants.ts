@@ -44,6 +44,11 @@ export const skills = [
           "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
       },
       {
+        name: "TypeScript",
+        image:
+          "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg",
+      },
+      {
         name: "Tailwind",
         image: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
       },
@@ -54,6 +59,7 @@ export const skills = [
       },
     ],
   },
+  // Back-end
   {
     title: "Backend",
     skills: [
@@ -96,6 +102,7 @@ export const skills = [
       },
     ],
   },
+  // Orthers
   {
     title: "Others",
     skills: [
