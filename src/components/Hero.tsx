@@ -19,7 +19,7 @@ const Hero = () => {
             id='Left' 
             className="w-full order-2 lg:order-1 mb-8 sm:mb-20 flex flex-col justify-center lg:justify-end items-center lg:items-start gap-3"
           >
-            <h1 className='text-4xl lg:text-5xl font-bold mb-0 text-white text-center lg:text-left sm:mb-2'>
+            <h1 className='text-4xl lg:text-5xl font-bold mb-0 text-center lg:text-left sm:mb-2'>
               Hi, my name is <br/>{Bio.name}
             </h1>
             <p className='flex text-2xl lg:text-3xl leading-[68px] font-bold mb-4 lg:mb-0 justify-center lg:justify-start text-center gap-3'>
@@ -34,7 +34,7 @@ const Hero = () => {
                 />
               </span>
             </p>
-            <p className='text-white text-lg lg:text-2xl mb-10'>
+            <p className='text-base lg:text-xl mb-10'>
               {Bio.description}
             </p>
             <Link 

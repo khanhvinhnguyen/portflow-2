@@ -11,6 +11,16 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.vectorlogo.zone',
         pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+        pathname: '**',
       }
     ],
     dangerouslyAllowSVG: true,

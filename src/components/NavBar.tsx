@@ -8,7 +8,9 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className='sticky top-0 left-0 w-full flex items-center justify-center p-4 z-50 transition-all duration-800 ease-in-out md:transition-none bg-black'>
+    <div className='sticky top-0 left-0 w-full flex items-center justify-center p-4 z-50 transition-all duration-800 ease-in-out md:transition-none 
+      shadow-xl'
+      >
       <div className='flex w-full max-w-7xl items-center justify-between'>
         {/* Logo */}
         <Link href='/' className='flex items-center'>
@@ -27,7 +29,7 @@ const NavBar = () => {
         {/* Nav Items */}
         <ul className='NavItems w-full items-center justify-end gap-8 hidden md:flex'>
           <Link 
-            href="#about"
+            href="/"
             className="hover:text-primary hover:font-bold"
           >
             About
@@ -71,7 +73,7 @@ const NavBar = () => {
         {
           isOpen &&
           <div className='MobileMenu flex flex-col items-center justify-center gap-4 fixed top-0 left-0 w-full h-screen bg-[#171717] text-white z-50'>
-            <Link href="#about" onClick={() => {
+            <Link href="/" onClick={() => {
               setIsOpen(!isOpen)
             }}>About</Link>
             <Link href='#skills' onClick={() => {
@@ -90,7 +92,7 @@ const NavBar = () => {
         }
 
       </div>
-    </header>
+    </div>
   )
 }
 
