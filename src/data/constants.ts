@@ -232,7 +232,7 @@ export const experiences = [
   },
 ];
 
-export const education = [
+export const educations = [
   {
     id: 0,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",

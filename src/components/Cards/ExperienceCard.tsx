@@ -29,8 +29,8 @@ const ExperienceCard = (props: ExperienceCardProps) => {
         />
         <div className='flex flex-col w-ful'>
           <h6 className='text-sm md:text-lg font-semibold text-primary'>{experience.role}</h6>
-          <p className='text-xs md:text-sm font-normal text-secondary'>{experience.company}</p>
-          <p className='text-xs md:text-sm font-normal text-secondary'>{experience.date}</p>
+          <p className='text-xs md:text-sm font-normal text-text_secondary'>{experience.company}</p>
+          <p className='text-xs md:text-sm font-normal text-text_secondary'>{experience.date}</p>
         </div>
       </div>
 
@@ -47,7 +47,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
                 {experience?.skills?.map((skill, index) => (
                   <p
                     key={index}
-                    className='text-xs md:text-sm font-normal text-secondary'
+                    className='text-xs md:text-sm font-normal text-text_secondary'
                   >• {skill}</p>
                 ))}
               </div>

@@ -42,7 +42,9 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className='text-sm mt-6 text-center'>
-          &copy; 2023 Rishav Chanda. All rights reserved.
+          &copy; 2023 - Designed by 
+          <Link href='https://github.com/rishavchanda' className='hover:text-primary'> Rishav Chanda </Link>and Developed by 
+          <Link href='https://github.com/KhanhVinhNguyen' className='hover:text-primary'> KhanhVinhNguyen</Link>. All rights reserved.
         </p>
 
       </div>
