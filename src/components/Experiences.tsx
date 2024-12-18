@@ -8,7 +8,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 import { experiences } from '@/data/constants';
-import { ExperienceCard } from '.';
+import { ExperienceCard } from './Cards';
 
 const Experiences = () => {
   const [timelinePosition, setTimelinePosition] = useState<"right" | "alternate-reverse">("alternate-reverse");
@@ -29,11 +29,11 @@ const Experiences = () => {
   return (
     <div 
       id='experience'
-      className='flex flex-col justify-center items-center relative z-10 p-0 lg:pt-10 lg:pb-20'
+      className='flex flex-col justify-center items-center relative z-10 p-0 '
     >
       <div className='relative flex flex-col justify-between items-center w-full max-w-[1350px] py-20 gap-3'>
         <h2 className='text-3xl lg:text-4xl font-bold text-center mt-3 lg:mt-5'>Experiences</h2>
-        <p className='max-w-[650px] text-center text-base lg:text-lg'>
+        <p className='max-w-7xl text-center text-base lg:text-lg'>
           My work experience as a software engineer and working on different companies and projects.
         </p>
 

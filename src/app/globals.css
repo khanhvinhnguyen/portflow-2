@@ -3,8 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 255, 255, 255;
+  --foreground: 23, 23, 23;  
+  --bgLight: 240, 240, 240;  
+
+  --primary: 190, 26, 219;   
+  --text_primary: 17, 17, 17;
+  --text_secondary: 72, 73, 74;
+
+  --card: 255, 255, 255;     
+  --button: 92, 91, 91;      
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 10, 10, 10;
+    --foreground: 237, 237, 237;
+
+    --primary: 133, 76, 230;   
+    --text_primary: 242, 243, 244;
+    --text_secondary: 177, 178, 179;
+
+    --card: 23, 23, 33;       
+    --button: 133, 76, 230;   
+  }
 }
 
 * {
@@ -14,13 +36,6 @@
   scroll-behavior: smooth;
 
   @apply transition-colors duration-200;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

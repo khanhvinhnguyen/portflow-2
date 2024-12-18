@@ -9,11 +9,21 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        'xl': '1440px',
+        '2xl': '1536px',
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "rgba(var(--background))",
+        foreground: "rgba(var(--foreground))",
 
-        primary: '#854CE6',
+        primary: "rgba(var(--primary))",
+        text_primary: "rgba(var(--text_primary))", 
+        text_secondary: "rgba(var(--text_secondary))", 
+      
+        
+        card: "rgba(var(--card))",
+        button: "rgba(var(--button))", 
       },
       clipPath: {
         'custom-polygon': 'polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%)',

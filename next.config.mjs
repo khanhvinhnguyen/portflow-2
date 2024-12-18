@@ -21,6 +21,16 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'media.licdn.com',
         pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'user-images.githubusercontent.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**',
+        pathname: '**',
       }
     ],
     dangerouslyAllowSVG: true,
