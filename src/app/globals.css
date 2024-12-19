@@ -5,7 +5,6 @@
 :root {
   --background: 255, 255, 255;
   --foreground: 23, 23, 23;  
-  --bgLight: 240, 240, 240;  
 
   --primary: 190, 26, 219;   
   --text_primary: 17, 17, 17;
@@ -47,5 +46,10 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  a {
+    color: rgba(var(--foreground));
+    text-decoration: none;
   }
 }

@@ -1,4 +1,4 @@
-import { Education, Experiences, Hero, Projects, Skills } from "@/components";
+import { Contact, Education, Experiences, Hero, Projects, Skills } from "@/components";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <Experiences />
       <Projects />
       <Education />
+      <Contact />
     </div>
   );
 }
