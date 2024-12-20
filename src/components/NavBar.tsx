@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
+import { ThemeToggle } from '.';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,9 +65,10 @@ const NavBar = () => {
           >
             Contact
           </Link>
-        </ul>
 
-        {/* Theme */}
+          {/* Theme */}
+          <ThemeToggle />
+        </ul>
 
 
         {/* Mobile Menu */}

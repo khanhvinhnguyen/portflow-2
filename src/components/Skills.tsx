@@ -18,7 +18,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className='w-full max-w-[330px] md:max-w-[400px] lg:max-w-[470px] border-[0.1px] border-solid border-purple-600 rounded-2xl py-2 lg:py-4 px-9'
+              className='w-full max-w-[330px] md:max-w-[400px] lg:max-w-[470px] border-[0.1px] bg-card border-solid border-purple-600 rounded-2xl py-2 lg:py-4 px-9'
             >
               <h3 className='text-3xl font-bold mb-5 text-center'>{skill.title}</h3>
               <div className='flex flex-wrap justify-center gap-3 mb-5'>

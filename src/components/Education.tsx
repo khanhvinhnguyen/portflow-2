@@ -8,6 +8,7 @@ import TimelineDot from '@mui/lab/TimelineDot';
 
 import { educations } from '@/data/constants';
 import { EducationCard } from './Cards';
+import { Education as EducationModel } from '@/libs';
 
 const Education = () => {
   return (
@@ -32,16 +33,16 @@ const Education = () => {
               },
             }}
           >
-            {educations.map((education,index) => (
-                <TimelineItem >
-                    <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <EducationCard education={education}/>
-                    </TimelineContent>
-                    <TimelineSeparator>
-                        <TimelineDot variant="outlined" color="secondary" />
-                        {index !== educations.length  && <TimelineConnector style={{ background: '#854CE6' }} />}
-                    </TimelineSeparator>
-                </TimelineItem>
+            {educations.map((education, index) => (
+              <TimelineItem key={index}>
+                  <TimelineContent sx={{ py: '12px', px: 2 }}>
+                      <EducationCard education={education as unknown as EducationModel} />
+                  </TimelineContent>
+                  <TimelineSeparator>
+                      <TimelineDot variant="outlined" color="secondary" />
+                      {index !== educations.length  && <TimelineConnector style={{ background: '#854CE6' }} />}
+                  </TimelineSeparator>
+              </TimelineItem>
             ))}
           </Timeline>
         </div>

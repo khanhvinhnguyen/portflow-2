@@ -8,4 +8,21 @@ import Projects from './Projects';
 import Education from './Education';
 import Contact from './Contact';
 
-export { NavBar, Footer, Hero, Skills, Experiences, Projects, Education, Contact };
+// Modal
+import ProjectDetail from "./ProjectDetail";
+
+// Theme
+import ThemeToggle from './ThemeToggle';
+
+export { 
+  NavBar,
+  Footer,
+  Hero,
+  Skills,
+  Experiences,
+  Projects,
+  ProjectDetail,
+  Education,
+  Contact,
+  ThemeToggle 
+};

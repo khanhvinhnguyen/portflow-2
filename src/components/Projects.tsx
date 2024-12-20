@@ -1,12 +1,16 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 
 import { projects } from '@/data/constants'
 import { ProjectCard } from './Cards';
+import { Project } from '@/libs';
 
-const Projects = () => {
-  const [toggle, setToggle] = useState('all');
-  const [openModal, setOpenModal] = useState({ state: false, project: null });
+type ProjectProps = {
+  setOpenModal: (openModal: { state: boolean; project: Project | null }) => void;
+}
+
+const Projects = ({setOpenModal}: ProjectProps) => {
+  // const [toggle, setToggle] = useState('all');
   
   return (
     <div 
@@ -26,15 +30,15 @@ const Projects = () => {
 
         {/* Card Section */}
         <div className='flex justify-center items-center gap-7 flex-wrap w-full max-w-[1100px]'>
-        {toggle === 'all' && projects
-            .map((project) => (
-              <ProjectCard project={project} setOpenModal={setOpenModal}/>
+        {projects
+            .map((project, index) => (
+              <ProjectCard key={index} project={project} setOpenModal={setOpenModal}/>
             ))}
-          {projects
-            .filter((item) => item.category == toggle)
-            .map((project) => (
-              <ProjectCard project={project} setOpenModal={setOpenModal}/>
-            ))}
+        {/* {projects
+          .filter((item) => item.category == toggle)
+          .map((project, index) => (
+            <ProjectCard key={index} project={project}/>
+          ))} */}
         </div>
 
       </div>

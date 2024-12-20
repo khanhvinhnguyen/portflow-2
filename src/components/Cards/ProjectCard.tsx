@@ -1,10 +1,13 @@
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import Image from 'next/image'
+"use client"
 import React from 'react'
+import Image from 'next/image'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+
+import { Project } from '@/libs';
 
 type ProjectCardProps = {
-  project: any;
-  setOpenModal: (project: any) => void;
+  project: Project;
+  setOpenModal: (openModal: { state: boolean; project: Project | null }) => void
 }
 const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
   return (
@@ -21,7 +24,7 @@ const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
         className='w-full h-[180px] object-cover bg-background rounded-[10px] shadow-[0px_0px_16px_2px_rgba(0,0,0,0.3)]'  
       />
       <div className='flex flex-wrap items-center w-full gap-2 mt-1'>
-        {project.tags?.map((tag: string | null | undefined, index: any ) => (
+        {project.tags?.map((tag: string | null | undefined, index ) => (
           <span 
             key={index}
             className='text-xs md:text-sm font-normal text-primary bg-primary/10 px-2 py-[2px] rounded-full '
@@ -40,7 +43,7 @@ const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
 
       {/* Member */}
       <div className='flex items-center pl-[10px]'>
-        {project.member?.map((member: { img: string | StaticImport; name: any; }, index: number) => (
+        {project.member?.map((member: { img: string | StaticImport; name: string; }, index) => (
           <Image 
             key={index} 
             src={member.img} 

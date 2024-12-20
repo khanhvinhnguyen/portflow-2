@@ -123,6 +123,10 @@ export const skills = [
         name: "Postman",
         image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
       },
+      {
+        name: "Vercel",
+        image: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg",
+      }
     ],
   },
 ];

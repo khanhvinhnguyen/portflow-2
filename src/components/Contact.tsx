@@ -23,13 +23,17 @@ type ContactForm = {
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
-  const form = useRef<HTMLFormElement>(null);
 
+  // Alert message
+  const [alertSeverity, setAlertSeverity] = useState<"success" | "error">("success");
+  const [alertMessage, setAlertMessage] = useState("");
+
+  // Form
+  const form = useRef<HTMLFormElement>(null);
   const {
     handleSubmit,
     control,
-    formState: { errors, isValid },
-    watch,
+    formState: { isValid },
   } = useForm<ContactForm>({
     mode: "onChange",
   });
@@ -42,18 +46,33 @@ const Contact = () => {
         to_email: Bio.email,
         to_name: Bio.name,
       };
-  
-      console.log('Prepared Data:', prepareData);
-  
-      const result = await emailjs.send('service_8u0g1id', 'template_bi7hqrs', prepareData, 'Jz_F8jnCmxOlZSe07');
-      console.log('Email successfully sent:', result);
-      form.current?.reset();
+
+      const result = await emailjs.send(
+        "service_8u0g1id",
+        "template_bi7hqrs",
+        prepareData,
+        "Jz_F8jnCmxOlZSe07"
+      );
+
+      if (result.status === 200 && result.text === "OK") {
+        setAlertSeverity("success");
+        setAlertMessage("Send message successfully");
+        setOpen(true);
+        form.current?.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
     } catch (error) {
       if (error instanceof Error) {
         console.error("Error sending form:", error.message);
+        setAlertSeverity("error");
+        setAlertMessage("Failed to send message. Please try again later.");
       } else {
         console.error("Unexpected error:", error);
+        setAlertSeverity("error");
+        setAlertMessage("An unexpected error occurred.");
       }
+      setOpen(true);
     } finally {
       setLoading(false);
     }
@@ -87,7 +106,7 @@ const Contact = () => {
       <form
         ref={form}
         onSubmit={handleSubmit(onSubmit)}
-        className="w-[95%] max-w-[1100px] flex flex-col mt-7 mx-4 gap-3 p-8 rounded-2xl bg-card shadow-[0px_4px_24px_rgba(23, 92, 230, 0.15)]"
+        className="w-[95%] max-w-[1100px] flex flex-col mt-7 mx-4 gap-3 p-8 rounded-2xl bg-card shadow-[0px_0px_12px_4px_rgba(0,0,0,0.4)]"
       >
         <h3 className="text-2xl font-bold mb-2 text-text_primary">
           Email me directly{" "}
@@ -207,10 +226,11 @@ const Contact = () => {
         onClose={handleClose}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
       >
-        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
-          Send message successfully
+        <Alert onClose={handleClose} severity={alertSeverity} sx={{ width: "100%" }}>
+          {alertMessage}
         </Alert>
       </Snackbar>
+
     </div>
   );
 };
