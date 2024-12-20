@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: 255, 255, 255;
+  --background: 255, 255, 250;
   --foreground: 23, 23, 23;
 
   --primary: 190, 26, 219;

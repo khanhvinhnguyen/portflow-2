@@ -1,13 +1,12 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
-import { Project } from '@/libs';
+import { Member, Project } from '@/libs';
 
 type ProjectCardProps = {
   project: Project;
-  setOpenModal: (openModal: { state: boolean; project: Project | null }) => void
+  setOpenModal: (openModal: { state: boolean; project: Project }) => void
 }
 const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
   return (
@@ -27,7 +26,7 @@ const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
         {project.tags?.map((tag: string | null | undefined, index ) => (
           <span 
             key={index}
-            className='text-xs md:text-sm font-normal text-primary bg-primary/10 px-2 py-[2px] rounded-full '
+            className='text-xs md:text-sm font-normal text-primary bg-primary/10 px-2 py-[2px] rounded-lg'
           >
             {tag}
           </span>
@@ -43,7 +42,7 @@ const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
 
       {/* Member */}
       <div className='flex items-center pl-[10px]'>
-        {project.member?.map((member: { img: string | StaticImport; name: string; }, index) => (
+        {project.member?.map((member: Member, index) => (
           <Image 
             key={index} 
             src={member.img} 
