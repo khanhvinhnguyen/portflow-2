@@ -3,6 +3,9 @@ const allowedHosts = [
   'github.com',
   'www.vectorlogo.zone',
   'firebasestorage.googleapis.com',
+  '*.wikimedia.org',
+  "*.fbcdn.net",
+  '*.topcv.vn',
   '*.githubusercontent.com',
   '*.licdn.com',
   '*.amazonaws.com'

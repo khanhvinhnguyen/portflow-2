@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -25,6 +25,22 @@ const Experiences = () => {
       window.removeEventListener('resize', updatePosition);
     };
   }, []);
+
+  const parseDate = (dateStr: string): Date => {
+    const [start, end] = dateStr.split(' - ');
+    if (end.toLowerCase() === 'present') {
+      return new Date(start);
+    }
+    return new Date(start);
+  };
+  
+  const sortedExperiences = useMemo(() => {
+    return [...experiences].sort((a, b) => {
+      const dateA = parseDate(a.date);
+      const dateB = parseDate(b.date);
+      return dateB.getTime() - dateA.getTime();
+    });
+  }, [experiences]);
   
   return (
     <div 
@@ -40,11 +56,11 @@ const Experiences = () => {
         {/* Timeline Section  */}
         <div className='w-full max-w-[1100px] mt-3 flex flex-col justify-center items-center gap-3'>
           <Timeline position={timelinePosition}>
-            {experiences.map((experience,index) => (
+            {sortedExperiences.map((experience,index) => (
               <TimelineItem key={index}>
                   <TimelineSeparator>
                       <TimelineDot variant="outlined" color="secondary" />
-                      {index !== experiences.length && 
+                      {index !== sortedExperiences.length && 
                         <TimelineConnector style={{ background: '#854CE6' }} />
                       }
                   </TimelineSeparator>

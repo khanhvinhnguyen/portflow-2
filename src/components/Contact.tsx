@@ -96,7 +96,7 @@ const Contact = () => {
     >
       <div className="relative flex flex-col justify-between items-center w-full max-w-[1350px] pt-20 gap-3">
         <h2 className="text-3xl lg:text-4xl font-bold text-center mt-3 lg:mt-5">
-          Education
+          Contact
         </h2>
         <p className="max-w-7xl text-center text-base lg:text-lg">
           Feel free to reach out to me for any questions or opportunities!

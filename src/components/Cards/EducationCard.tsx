@@ -21,7 +21,7 @@ const EducationCard = ({education}: EducationCardProps) => {
           alt={education.school + ' logo'} 
           width={100} 
           height={100}
-          className='rounded-xl h-10 md:h-12 w-10 md:w-12 mt-1 bg-white' 
+          className='rounded-xl h-10 md:h-14 w-10 md:w-14 mt-1 bg-white' 
         />
         <div className='flex flex-col w-ful'>
           <h6 className='text-sm md:text-lg font-semibold text-primary'>{education.school}</h6>
