@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import { useTheme } from "../context/ThemeContext";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+
+import { useTheme } from "@/context/ThemeContext";
 
 const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -13,9 +14,9 @@ const ThemeToggle: React.FC = () => {
       aria-label="Toggle Theme"
     >
       {theme === "light" ? (
-        <FaMoon size={20} aria-hidden="true" />
+        <MdDarkMode size={20} aria-hidden="true" />
       ) : (
-        <FaSun size={20}  aria-hidden="true" />
+        <MdLightMode size={20}  aria-hidden="true" />
       )}
     </button>
   );

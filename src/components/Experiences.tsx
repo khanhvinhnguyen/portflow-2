@@ -28,7 +28,7 @@ const Experiences = () => {
   
   return (
     <div 
-      id='experience'
+      id='experiences'
       className='flex flex-col justify-center items-center relative z-10 p-0 '
     >
       <div className='relative flex flex-col justify-between items-center w-full max-w-[1350px] py-20 gap-3'>

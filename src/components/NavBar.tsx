@@ -4,6 +4,16 @@ import React, { useState } from 'react'
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { ThemeToggle } from '.';
+import { AiOutlineClose } from 'react-icons/ai';
+
+const navigator = [
+  {name: "About", link: "/"},
+  {name: "Skills", link: "#skills"},
+  {name: "Experience", link: "#experiences"},
+  {name: "Projects", link: "#projects"},
+  {name: "Education", link: "#education"},
+  {name: "Contact", link: "#contact"},
+]
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,77 +29,80 @@ const NavBar = () => {
             <span className='py-0 px-1 font-bold text-lg'>Portfolio</span>
         </Link>
 
-        {/* Hamburger */}
-        <div 
-          className="hamburger block md:hidden" 
-          onClick={() => {setIsOpen(!isOpen)}}
-        >
-          <FaBars /> 
-        </div>
+        
 
         {/* Nav Items */}
         <ul className='NavItems w-full items-center justify-end gap-8 hidden md:flex'>
-          <Link 
-            href="/"
-            className="hover:text-primary hover:font-bold"
-          >
-            About
-          </Link>
-          <Link 
-            href='#skills'
-            className="hover:text-primary hover:font-bold"
-          >
-            Skills
-          </Link>
-          <Link 
-            href='#experience'
-            className="hover:text-primary hover:font-bold"
-          >
-            Experience
-          </Link>
-          <Link 
-            href='#projects'
-            className="hover:text-primary hover:font-bold"
-          >
-            Projects
-          </Link>
-          <Link 
-            href='#education'
-            className="hover:text-primary hover:font-bold"
-          >
-            Education
-          </Link>
-          <Link 
-            href='#contact'
-            className="hover:text-primary hover:font-bold"
-          >
-            Contact
-          </Link>
+          {
+            navigator.map((item, index) => (
+              <Link 
+                key={index}
+                href={item.link}
+                className="hover:text-primary hover:font-bold capitalize"
+              >
+                {item.name}
+              </Link>
+            ))
+          }
 
           {/* Theme */}
-          <ThemeToggle />
         </ul>
 
+        <div className='flex items-center gap-2'>
+          <ThemeToggle />
+          <div 
+            className="hamburger block md:hidden" 
+            onClick={() => {setIsOpen(!isOpen)}}
+          >
+            <FaBars /> 
+          </div>
+        </div>
 
-        {/* Mobile Menu */}
-        {
-          isOpen &&
-          <div className='MobileMenu flex flex-col items-center justify-center gap-4 fixed top-0 left-0 w-full h-screen bg-[#171717] text-white z-50'>
-            <Link href="/" onClick={() => {
-              setIsOpen(!isOpen)
-            }}>About</Link>
-            <Link href='#skills' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Skills</Link>
-            <Link href='#experience' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Experience</Link>
-            <Link href='#projects' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Projects</Link>
-            <Link href='#education' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Education</Link>
+        {isOpen && 
+          <div className={"fixed left-0 top-0 w-full h-screen bg-black/70"}>
+            <div
+              className={
+                isOpen
+                  ? "fixed left-0 top-0 w-[75%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+                  : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+              }
+            >
+              <div>
+                {/* Logo */}
+                <div className="flex w-full items-center justify-between">
+                  <Link href='/' className='flex items-center'>
+                    <DiCssdeck size="3rem" /> 
+                    <span className='py-0 px-1 font-bold text-lg'>Portfolio</span>
+                  </Link>
+
+                  <div
+                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <AiOutlineClose />
+                  </div>
+                </div>
+                <div className="border-b border-gray-300 my-4 pt-4" />
+
+                {/* Menu */}
+                <div className="py-4 flex flex-col">
+                  <ul className="capitalize">
+                    {
+                      navigator.map((item, index) => (
+                        <Link 
+                          key={index}
+                          href={item.link}
+                        >
+                          <li className='py-4 text-sm'>
+                            {item.name}
+                          </li>
+                        </Link>
+                      ))
+                    }
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         }
 

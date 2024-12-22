@@ -56,6 +56,7 @@ const Hero = () => {
               alt={`${Bio.name} profile picture`}
               width={400} 
               height={400}
+              priority
             />
           </div>
         </div>

@@ -18,7 +18,7 @@ const EducationCard = ({education}: EducationCardProps) => {
       <div className='w-full flex gap-3'>
         <Image 
           src={education.img} 
-          alt={education.role} 
+          alt={education.school + ' logo'} 
           width={100} 
           height={100}
           className='rounded-xl h-10 md:h-12 w-10 md:w-12 mt-1 bg-white' 
