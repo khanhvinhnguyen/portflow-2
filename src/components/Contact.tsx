@@ -21,8 +21,6 @@ type ContactForm = {
   message: string;
 };
 const Contact = () => {
-  const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } = process.env;
-
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -43,18 +41,21 @@ const Contact = () => {
   const onSubmit: SubmitHandler<ContactForm> = async (data) => {
     setLoading(true);
     try {
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("Missing EmailJS configuration");
+      }
+
       const prepareData = {
         ...data,
         to_email: Bio.email,
         to_name: Bio.name,
       };
 
-      const result = await emailjs.send(
-        EMAILJS_SERVICE_ID as string,
-        EMAILJS_TEMPLATE_ID as string,
-        prepareData,
-        EMAILJS_PUBLIC_KEY as string
-      );
+      const result = await emailjs.send(serviceId, templateId, prepareData, publicKey);
 
       if (result.status === 200 && result.text === "OK") {
         setAlertSeverity("success");
@@ -66,7 +67,6 @@ const Contact = () => {
       }
     } catch (error) {
       if (error instanceof Error) {
-        console.error("Error sending form:", error.message);
         setAlertSeverity("error");
         setAlertMessage("Failed to send message. Please try again later.");
       } else {
