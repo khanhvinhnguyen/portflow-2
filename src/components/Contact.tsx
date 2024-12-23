@@ -21,6 +21,8 @@ type ContactForm = {
   message: string;
 };
 const Contact = () => {
+  const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_OPTIONS } = process.env;
+
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -48,10 +50,10 @@ const Contact = () => {
       };
 
       const result = await emailjs.send(
-        "service_8u0g1id",
-        "template_bi7hqrs",
+        EMAILJS_SERVICE_ID as string,
+        EMAILJS_TEMPLATE_ID as string,
         prepareData,
-        "Jz_F8jnCmxOlZSe07"
+        EMAILJS_OPTIONS
       );
 
       if (result.status === 200 && result.text === "OK") {
