@@ -53,7 +53,7 @@ const Contact = () => {
         EMAILJS_SERVICE_ID as string,
         EMAILJS_TEMPLATE_ID as string,
         prepareData,
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY as string
       );
 
       if (result.status === 200 && result.text === "OK") {
