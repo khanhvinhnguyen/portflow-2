@@ -92,6 +92,7 @@ const NavBar = () => {
                         <Link 
                           key={index}
                           href={item.link}
+                          onClick={() => setIsOpen(false)}
                         >
                           <li className='py-4 text-sm'>
                             {item.name}

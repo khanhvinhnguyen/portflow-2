@@ -40,7 +40,7 @@ const Experiences = () => {
       const dateB = parseDate(b.date);
       return dateB.getTime() - dateA.getTime();
     });
-  }, [experiences]);
+  }, []);
   
   return (
     <div 

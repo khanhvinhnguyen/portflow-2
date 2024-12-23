@@ -11,7 +11,7 @@ type ProjectCardProps = {
 const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
   return (
     <div
-      className='w-[330px] h-[490px] bg-card cursor-pointer rounded-xl overflow-hidden flex flex-col py-6 px-5 gap-4 transitions-all duration-500 ease-in-out shadow-[0px_0px_12px_4px_rgba(0,0,0,0.4)]
+      className='w-[330px] h-[490px] bg-card cursor-pointer rounded-xl overflow-hidden flex flex-col py-6 px-5 gap-3 transitions-all duration-500 ease-in-out shadow-[0px_0px_12px_4px_rgba(0,0,0,0.4)]
       hover:shadow-[0px_0px_50px_4px_rgba(0,0,0,0.6)] hover:brightness-110 hover:translate-y-[-10px]'
       onClick={() => setOpenModal({state: true, project: project})}
     >
@@ -22,7 +22,7 @@ const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
         height={180}
         className='w-full h-[180px] object-cover bg-background rounded-[10px] shadow-[0px_0px_16px_2px_rgba(0,0,0,0.3)]'  
       />
-      <div className='flex flex-wrap items-center w-full gap-2 mt-1'>
+      <div className='flex flex-wrap items-center w-full gap-2 mt-1 line-clamp-2'>
         {project.tags?.map((tag: string | null | undefined, index ) => (
           <span 
             key={index}

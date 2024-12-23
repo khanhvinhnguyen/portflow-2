@@ -52,7 +52,7 @@ const Hero = () => {
           >
             <Image 
               className='relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-full border-2 border-solid border-white'
-              src={'https://placehold.co/400'} 
+              src={Bio.avatar || 'https://placehold.co/400'}
               alt={`${Bio.name} profile picture`}
               width={400} 
               height={400}

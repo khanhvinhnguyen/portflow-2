@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { Modal } from '@mui/material';
@@ -14,18 +14,6 @@ type ProjectDetailProps = {
 }
 const ProjectDetail = ({ openModal, setOpenModal }: ProjectDetailProps) => {
   const project = openModal?.project;
-
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-    };
-
-    handleResize(); // Set initial size
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
