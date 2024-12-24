@@ -9,20 +9,19 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Member, Project } from '@/libs';
 
 type ProjectDetailProps = {
-  openModal: { state: boolean; project: Project };
-  setOpenModal: (project: { state: boolean; project: Project | null }) => void;
-}
-const ProjectDetail = ({ openModal, setOpenModal }: ProjectDetailProps) => {
-  const project = openModal?.project;
+  project: Project;
+  onClose: () => void
 
+}
+const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
   return (
-    <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
+    <Modal open={true} onClose={onClose}>
       <div className='w-full h-full flex justify-center items-top absolute top-0 left-0 bg-[#000000a7] overflow-y-auto transition-all duration-500 ease-linear'>
         <div className='max-w-[880px] w-full h-min rounded-2xl bg-card text-text_primary flex flex-col p-5 my-12 mx-3 relative'>
           <IoClose 
             size={25}
             className='absolute top-3 right-3 cursor-pointer'
-            onClick={() => setOpenModal({ state: false, project: null })}
+            onClick={onClose}
           />
 
           <Image 

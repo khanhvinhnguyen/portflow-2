@@ -2,18 +2,21 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { useGlobalContext } from "@/context/GlobalContext";
 import { Member, Project } from '@/libs';
 
 type ProjectCardProps = {
   project: Project;
-  setOpenModal: (openModal: { state: boolean; project: Project }) => void
-}
-const ProjectCard = ({project, setOpenModal}: ProjectCardProps) => {
+};
+
+const ProjectCard = ({project}: ProjectCardProps) => {
+  const { openProjectModal } = useGlobalContext();
+
   return (
     <div
       className='w-[330px] h-[490px] bg-card cursor-pointer rounded-xl overflow-hidden flex flex-col py-6 px-5 gap-3 transitions-all duration-500 ease-in-out shadow-[0px_0px_12px_4px_rgba(0,0,0,0.4)]
       hover:shadow-[0px_0px_50px_4px_rgba(0,0,0,0.6)] hover:brightness-110 hover:translate-y-[-10px]'
-      onClick={() => setOpenModal({state: true, project: project})}
+      onClick={() => openProjectModal(project)}
     >
       <Image 
         src={project.image} 

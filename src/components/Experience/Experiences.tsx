@@ -8,7 +8,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 import { experiences } from '@/data/constants';
-import { ExperienceCard } from './Cards';
+import ExperienceCard from './ExperienceCard';
 
 const Experiences = () => {
   const [timelinePosition, setTimelinePosition] = useState<"right" | "alternate-reverse">("alternate-reverse");

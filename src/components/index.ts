@@ -3,13 +3,14 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Skills from "./Skills";
-import Experiences from './Experiences';
-import Projects from './Projects';
-import Education from './Education';
+import Experiences from './Experience/Experiences';
+import ExperienceCard from './Experience/ExperienceCard';
+import Projects from './Project/Projects';
+import ProjectCard from './Project/ProjectCard';
+import ProjectDetail from "./Project/ProjectDetail";
+import Education from "./Education/Education";
+import EducationCard from './Education/EducationCard';
 import Contact from './Contact';
-
-// Modal
-import ProjectDetail from "./ProjectDetail";
 
 // Theme
 import ThemeToggle from './ThemeToggle';
@@ -20,9 +21,12 @@ export {
   Hero,
   Skills,
   Experiences,
+  ExperienceCard,
   Projects,
+  ProjectCard,
   ProjectDetail,
   Education,
+  EducationCard,
   Contact,
   ThemeToggle 
 };

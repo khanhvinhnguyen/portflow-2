@@ -3,8 +3,8 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
-import { Snackbar } from "@mui/material";
 
+import { useGlobalContext } from "@/context/GlobalContext";
 import { Bio } from "@/data/constants";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
@@ -21,12 +21,9 @@ type ContactForm = {
   message: string;
 };
 const Contact = () => {
-  const [loading, setLoading] = useState(false);
-  const [open, setOpen] = useState(false);
+  const { showSnackbar } = useGlobalContext();
 
-  // Alert message
-  const [alertSeverity, setAlertSeverity] = useState<"success" | "error">("success");
-  const [alertMessage, setAlertMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // Form
   const form = useRef<HTMLFormElement>(null);
@@ -55,40 +52,31 @@ const Contact = () => {
         to_name: Bio.name,
       };
 
-      const result = await emailjs.send(serviceId, templateId, prepareData, publicKey);
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        prepareData,
+        publicKey
+      );
 
       if (result.status === 200 && result.text === "OK") {
-        setAlertSeverity("success");
-        setAlertMessage("Send message successfully");
-        setOpen(true);
+        showSnackbar("Send message successfully!", "success");
         form.current?.reset();
       } else {
         throw new Error("Failed to send message");
       }
     } catch (error) {
       if (error instanceof Error) {
-        setAlertSeverity("error");
-        setAlertMessage("Failed to send message. Please try again later.");
+        showSnackbar(
+          "Failed to send message. Please try again later.",
+          "error"
+        );
       } else {
-        console.error("Unexpected error:", error);
-        setAlertSeverity("error");
-        setAlertMessage("An unexpected error occurred.");
+        showSnackbar("An unexpected error occurred.", "error");
       }
-      setOpen(true);
     } finally {
       setLoading(false);
     }
-  };
-  
-
-  const handleClose = (
-    event?: React.SyntheticEvent | Event,
-    reason?: string
-  ) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setOpen(false);
   };
 
   return (
@@ -221,18 +209,6 @@ const Contact = () => {
           )}
         </button>
       </form>
-
-      <Snackbar
-        open={open}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      >
-        <Alert onClose={handleClose} severity={alertSeverity} sx={{ width: "100%" }}>
-          {alertMessage}
-        </Alert>
-      </Snackbar>
-
     </div>
   );
 };

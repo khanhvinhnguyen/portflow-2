@@ -18,7 +18,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
   const { experience } = props
 
   return (
-    <div className='w-[300px] md:w-[650px] lg:w-full flex flex-col justify-between items-center relative overflow-hidden gap-3 text-left border-[0.1px] border-solid border-purple-600 rounded-md py-3 px-4'>
+    <div className='w-[300px] md:w-[650px] lg:w-full flex flex-col justify-between items-center bg-card relative overflow-hidden gap-3 text-left border-[0.1px] border-solid border-purple-600 rounded-md py-3 px-4'>
       <div className='w-full flex gap-3'>
         <Image 
           src={experience.img} 

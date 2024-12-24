@@ -7,8 +7,8 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 import { educations } from '@/data/constants';
-import { EducationCard } from './Cards';
 import { Education as EducationModel } from '@/libs';
+import EducationCard from './EducationCard';
 
 const Education = () => {
   return (

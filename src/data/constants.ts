@@ -9,7 +9,7 @@ export const Bio = {
   ],
   description:
     "A dedicated developer skilled in modern frontend and backend technologies, focused on creating impactful, user-friendly solutions while continuously expanding expertise through learning and collaboration.",
-  resume: "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+  resume: "https://www.topcv.vn/xem-cv/XAIBAFdUUgYCUwUGBQQGAQFSUQIBUgAAA15SAwb726",
   github: "https://github.com/khanhvinhnguyen",
   linkedin: "https://www.linkedin.com/in/khanhvinhnguyen/",
   email: "vinhnk.work@gmail.com",

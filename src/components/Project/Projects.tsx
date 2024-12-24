@@ -2,14 +2,10 @@
 import React from 'react'
 
 import { projects } from '@/data/constants'
-import { ProjectCard } from './Cards';
 import { Project } from '@/libs';
+import ProjectCard from './ProjectCard';
 
-type ProjectProps = {
-  setOpenModal: (openModal: { state: boolean; project: Project | null }) => void;
-}
-
-const Projects = ({setOpenModal}: ProjectProps) => {
+const Projects = () => {
   // const [toggle, setToggle] = useState('all');
   
   return (
@@ -32,7 +28,7 @@ const Projects = ({setOpenModal}: ProjectProps) => {
         <div className='flex justify-center items-center gap-7 flex-wrap w-full max-w-[1100px]'>
         {projects
             .map((project, index) => (
-              <ProjectCard key={index} project={project} setOpenModal={setOpenModal}/>
+              <ProjectCard key={index} project={project}/>
             ))}
         {/* {projects
           .filter((item) => item.category == toggle)
