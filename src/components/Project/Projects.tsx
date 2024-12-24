@@ -2,7 +2,6 @@
 import React from 'react'
 
 import { projects } from '@/data/constants'
-import { Project } from '@/libs';
 import ProjectCard from './ProjectCard';
 
 const Projects = () => {

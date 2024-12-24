@@ -2,17 +2,9 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import MuiAlert, { AlertProps } from "@mui/material/Alert";
 
 import { useGlobalContext } from "@/context/GlobalContext";
 import { Bio } from "@/data/constants";
-
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
-  props,
-  ref
-) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
 
 type ContactForm = {
   userName: string;

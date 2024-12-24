@@ -1,10 +1,6 @@
 "use client";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { Snackbar, Alert } from "@mui/material";
-import { Modal } from "@mui/material";
-import { IoClose } from "react-icons/io5";
-import Image from "next/image";
-import Link from "next/link";
 
 import { Project } from "@/libs";
 import { ProjectDetail } from "@/components";
