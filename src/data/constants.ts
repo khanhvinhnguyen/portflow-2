@@ -219,7 +219,7 @@ export const projects = [
       "https://firebasestorage.googleapis.com/v0/b/portfolio-35084.appspot.com/o/DieuThienBanner.jpg?alt=media&token=94a79ff9-a581-4990-8d6e-eeccf491c29c",
     tags: [
       "Nextjs",
-      "Next-int",
+      "Next-intl",
       "React-Hook-Form",
       "Ant Design",
       "Framer Motion",
