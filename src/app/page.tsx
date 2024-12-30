@@ -14,23 +14,11 @@ export default function Home() {
     <Suspense fallback={<div>Loading...</div>}>
       <div className='w-full overflow-hidden'>
         <Hero />
-        <div 
-          className='w-full' 
-          style={{
-            background: 'linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%)',
-            clipPath: 'polygon(0px 0px, 100% 0px, 100% 100%, 30% 98%, 0px 100%)',
-          }}
-        >
+        <div className='w-full bg-custom'>
           <Skills />
           <Experiences />
         </div>
-        <div 
-          className='w-full' 
-          style={{
-            background: 'linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%)',
-            clipPath: 'polygon(0px 0px, 100% 0px, 100% 100%, 30% 98%, 0px 100%)',
-          }}
-        >
+        <div className='w-full bg-custom' >
           <Projects />
           <Education />
         </div>
