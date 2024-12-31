@@ -78,7 +78,7 @@ export const skills = [
         image: "https://www.vectorlogo.zone/logos/nestjs/nestjs-icon.svg",
       },
       {
-        name: "GraphQl",
+        name: "GraphQL",
         image: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
       },
       {

@@ -1,12 +1,12 @@
 const allowedHosts = [
-  'placehold.co',
-  'github.com',
-  'www.vectorlogo.zone',
-  'firebasestorage.googleapis.com',
+  '*.placehold.co',
+  '*.googleapis.com',
+  '*.github.com',
+  '*.githubusercontent.com',
+  '*.vectorlogo.zone',
   '*.wikimedia.org',
   "*.fbcdn.net",
   '*.topcv.vn',
-  '*.githubusercontent.com',
   '*.licdn.com',
   '*.amazonaws.com'
 ];
