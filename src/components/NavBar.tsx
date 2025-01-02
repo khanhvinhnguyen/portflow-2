@@ -63,7 +63,7 @@ const NavBar = () => {
             <div
               className={
                 isOpen
-                  ? "fixed left-0 top-0 w-[75%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+                  ? "fixed left-0 top-0 w-[75%] h-screen bg-background p-10 ease-in duration-500"
                   : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
               }
             >
