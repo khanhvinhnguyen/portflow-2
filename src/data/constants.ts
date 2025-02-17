@@ -230,7 +230,7 @@ export const projects = [
     github: "",
     webapp: "https://amthucchaydieuthien.com/",
     member: [{
-      img: 'https://media.licdn.com/dms/image/v2/D5635AQH-T4uKaDSHIQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1733931495533?e=1735549200&v=beta&t=xWMM25xqHJU6dkzPC8HgPT-tjGh9LUl-BlVFpP0qxGk',
+      img: 'https://media.licdn.com/dms/image/v2/D5635AQH-T4uKaDSHIQ/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1733931495533?e=1740387600&v=beta&t=yF5fAfzAHMn_LWOxOOQ0BDW3n3-JlLXbk5oJXDZ4Gc4',
       name: 'My Lưu',
       linkedin: 'https://www.linkedin.com/in/my-luu/',
       github: 'https://github.com/mayluu',
