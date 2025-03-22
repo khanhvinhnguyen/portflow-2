@@ -24,6 +24,7 @@ const ProjectCard = ({project}: ProjectCardProps) => {
         width={100} 
         height={180}
         className='w-full h-[180px] object-cover bg-background rounded-[10px] shadow-[0px_0px_16px_2px_rgba(0,0,0,0.3)]'  
+        unoptimized
       />
       <div className='flex flex-wrap items-center w-full gap-2 mt-1 line-clamp-2'>
         {project.tags?.map((tag: string | null | undefined, index ) => (
@@ -53,6 +54,7 @@ const ProjectCard = ({project}: ProjectCardProps) => {
             width={38} 
             height={38}
             className='rounded-full ml-[-10px] bg-white shadow-[0px_0px_10px_rgba(0,0,0,0.2)] border-[0.1px] border-solid border-card'
+            unoptimized
           />
         ))}
       </div>

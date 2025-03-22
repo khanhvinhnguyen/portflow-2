@@ -30,6 +30,7 @@ const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
             width={840} 
             height={500}
             className='w-full object-cover rounded-xl mt-7 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.3)]'
+            unoptimized
           />
 
           {/* Project Info */}
@@ -56,7 +57,7 @@ const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
               <div className='flex flex-col flex-wrap my-[8px] md:my-3 mx-[6px] md:mx-2 gap-[6px]'>
                 {project?.member.map((member: Member, index: number) => (
                   <div key={index} className='flex w-full md:w-1/2 justify-between items-center gap-3'>
-                    <Image src={member.img} alt={member.name} width={50} height={50} className='w-8 h-8 md:w-12 md:h-12 rounded-full object-cover mt-1 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.3)]'/>
+                    <Image src={member.img} alt={member.name} width={50} height={50} className='w-8 h-8 md:w-12 md:h-12 rounded-full object-cover mt-1 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.3)]' unoptimized/>
                     <p className='text-sm md:text-base flex-1 font-medium text-text_primary'>{member.name}</p>
                     <a href={member.github} target="new" className='text-decoration-none text-inherit'>
                       <FaGithub size={24}/>

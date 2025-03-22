@@ -27,7 +27,7 @@ const Skills = () => {
                     key={index}
                     className='text-sm lg:text-base py-1 md:py-2 lg:py-3 px-3 lg:px-4 flex justify-center items-center gap-2'
                   >
-                    <Image src={item.image} width={24} height={24} alt={item.name}></Image>
+                    <Image src={item.image} width={24} height={24} alt={item.name} unoptimized />
                     <p>{item.name}</p>
                   </div>
                 ))}
