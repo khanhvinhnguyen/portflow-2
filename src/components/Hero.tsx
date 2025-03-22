@@ -53,12 +53,13 @@ const Hero = () => {
             className="flex w-full order-1 sm:order-1 lg:order-2 mb-8 lg:mb-0  justify-center lg:justify-end items-center"
           >
             <Image
-              className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-full border-2 border-solid border-white"
+              className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-full border-2 border-solid border-white object-cover"
               src={Bio.avatar || "https://placehold.co/400"}
               alt={`${Bio.name} profile picture`}
               width={400}
               height={400}
               priority
+              unoptimized
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 
 export const Bio = {
-  avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHGRX6J_XK6Ig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708592954972?e=1740614400&v=beta&t=FF-iX1KZ7gmUPKvr7Yr8fCguI_ComIQCypVZ07nJQqE',
+  avatar: '/images/profile.webp',
   name: "Vinh Nguyen",
   roles: [
     "Frontend Developer",
@@ -192,7 +192,7 @@ export const educations = [
   },
   {
     id: 1,
-    img: "https://scontent.fhan3-5.fna.fbcdn.net/v/t39.30808-1/285790288_412721004068006_6441068186446103437_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=0yYWjd_UO9IQ7kNvgFosPVy&_nc_oc=AdiaiU4ue8oNqeeTs4G_Uyzf0sw0fgGyU7RVWeUkaWqxi6M9gSwlVKWqeT1_XVxCn1N-CSUxwHDoRINcFEIm2em1&_nc_zt=24&_nc_ht=scontent.fhan3-5.fna&_nc_gid=ADEPwHhD3Dgydtmvw-j-Vn8&oh=00_AYAwdZwvSNlxjCNL_h_jnlbbj-G-4YH2JcDkhxf5ujtkVQ&oe=676DE344",
+    img: "/images/toeic.webp",
     school: "TOEIC LR",
     degree: "English Certificate",
     date: "Jan 2024",
@@ -200,7 +200,7 @@ export const educations = [
   },
   {
     id: 2,
-    img: "https://scontent.fhan3-5.fna.fbcdn.net/v/t39.30808-1/285790288_412721004068006_6441068186446103437_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=0yYWjd_UO9IQ7kNvgFosPVy&_nc_oc=AdiaiU4ue8oNqeeTs4G_Uyzf0sw0fgGyU7RVWeUkaWqxi6M9gSwlVKWqeT1_XVxCn1N-CSUxwHDoRINcFEIm2em1&_nc_zt=24&_nc_ht=scontent.fhan3-5.fna&_nc_gid=ADEPwHhD3Dgydtmvw-j-Vn8&oh=00_AYAwdZwvSNlxjCNL_h_jnlbbj-G-4YH2JcDkhxf5ujtkVQ&oe=676DE344",
+    img: "/images/toeic.webp",
     school: "TOEIC SW",
     degree: "English Certificate",
     date: "Mar 2024",
@@ -230,7 +230,7 @@ export const projects = [
     github: "",
     webapp: "https://amthucchaydieuthien.com/",
     member: [{
-      img: 'https://media.licdn.com/dms/image/v2/D5635AQH-T4uKaDSHIQ/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1733931495533?e=1740387600&v=beta&t=yF5fAfzAHMn_LWOxOOQ0BDW3n3-JlLXbk5oJXDZ4Gc4',
+      img: '/images/myluu.webp',
       name: 'My Lưu',
       linkedin: 'https://www.linkedin.com/in/my-luu/',
       github: 'https://github.com/mayluu',
